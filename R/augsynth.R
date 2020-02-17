@@ -307,8 +307,8 @@ plot.summary.augsynth <- function(summ, se = T) {
     p <- summ$att %>%
         ggplot2::ggplot(ggplot2::aes(x=Time, y=Estimate))
     if(se) {
-        p <- p + ggplot2::geom_ribbon(ggplot2::aes(ymin=Estimate-2*Std.Error,
-                        ymax=Estimate+2*Std.Error),
+        p <- p + ggplot2::geom_ribbon(ggplot2::aes(ymin=Estimate-1.96*Std.Error,
+                        ymax=Estimate+1.96*Std.Error),
                     alpha=0.2)
     }
     p + ggplot2::geom_line() +
