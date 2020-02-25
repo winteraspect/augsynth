@@ -354,6 +354,7 @@ plot.summary.augsynth <- function(x, ...) {
         p <- p + ggplot2::geom_ribbon(ggplot2::aes(ymin=Estimate-1.96*Std.Error,
                         ymax=Estimate+1.96*Std.Error),
                     alpha=0.2)
+        message('the bandwidth of the CI is changed to 1.96 * se')
     }
     p + ggplot2::geom_line() +
         ggplot2::geom_vline(xintercept=summ$t_int, lty=2) +
