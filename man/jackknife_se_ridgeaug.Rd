@@ -5,10 +5,23 @@
 \title{Estimate standard errors with the jackknife
 Do this for ridge-augmented synth}
 \usage{
-jackknife_se_ridgeaug(wide_data, synth_data, Z = NULL, lambda = NULL,
-  ridge = T, scm = T, fixedeff = F)
+jackknife_se_ridgeaug(
+  wide_data,
+  synth_data,
+  Z = NULL,
+  lambda = NULL,
+  ridge = T,
+  scm = T,
+  fixedeff = F
+)
 }
 \arguments{
+\item{wide_data}{Data formatted from format_data}
+
+\item{synth_data}{Data formatted from foramt_synth}
+
+\item{Z}{Matrix of auxiliary covariates}
+
 \item{lambda}{Ridge hyper-parameter, if NULL use CV}
 
 \item{ridge}{Include ridge or not}
